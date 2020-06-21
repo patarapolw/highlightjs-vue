@@ -1,22 +1,22 @@
 {
-  "name": "highlightjs-vue",
+  "name": "@patarapolw/highlightjs-vue",
   "version": "1.0.0",
   "description": "Highlight Single-File Components of Vue.js Framework",
   "types": "vue.d.ts",
-  "main": "dist/highlightjs-vue.cjs.js",
-  "module": "dist/highlightjs-vue.esm.js",
+  "main": "dist/@patarapolw/highlightjs-vue.cjs.js",
+  "module": "dist/@patarapolw/highlightjs-vue.esm.js",
   "files": [
     "dist",
     "vue.d.ts"
   ],
   "scripts": {
     "build": "npm run clean && rollup --config",
-    "clean": "rimraf dist package-lock.json",
+    "clean": "rimraf dist",
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/highlightjs/highlightjs-vue.git"
+    "url": "git+https://github.com/patarapolw/highlightjs-vue.git"
   },
   "keywords": [
     "highlight",
@@ -24,12 +24,12 @@
     "vue.js",
     "vue"
   ],
-  "author": "Sara Lissette Luis Ibáñez <lissette.ibnz@gmail.com> (https://github.com/LissetteIbnz)",
+  "author": "Pacharapol Withayasakpunt <polv@polv.cc> (https://github.com/patarapolw)",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/highlightjs/highlightjs-vue/issues"
+    "url": "https://github.com/patarapolw/highlightjs-vue/issues"
   },
-  "homepage": "https://github.com/highlightjs/highlightjs-vue#readme",
+  "homepage": "https://github.com/patarapolw/highlightjs-vue#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/highlight.js": "^9.12.3",
@@ -42,5 +42,8 @@
   },
   "peerDependencies": {
     "highlight.js": "*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
