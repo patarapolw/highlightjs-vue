@@ -52,8 +52,15 @@ function hljsDefineVue(hljs) {
   };
 }
 
-module.exports = function(hljs) {
+var hljsRegisterVue = function(hljs) {
   hljs.registerLanguage("vue", hljsDefineVue);
 };
 
+module.exports = hljsRegisterVue;
+module.exports.hljsRegisterVue = hljsRegisterVue;
+module.exports.hljsDefineVue = hljsDefineVue;
+
+/**
+ * @deprecated
+ */
 module.exports.definer = hljsDefineVue;
