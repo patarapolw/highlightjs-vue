@@ -1,6 +1,6 @@
 {
   "name": "@patarapolw/highlightjs-vue",
-  "version": "1.0.0-dev1",
+  "version": "1.0.0-dev2",
   "description": "Highlight Single-File Components of Vue.js Framework",
   "types": "vue.d.ts",
   "main": "dist/@patarapolw/highlightjs-vue.cjs.js",
