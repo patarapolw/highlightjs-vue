@@ -1,6 +1,6 @@
 /*
 Language: Vue.js
-Requires: xml.js, pug.js, javascript.js, typescript.js, css.js, stylus.js, scss.js
+Requires: xml.js, javascript.js, typescript.js, css.js, stylus.js, scss.js
 Author: Sara Lissette Luis Ibáñez <lissette.ibnz@gmail.com>
 Description: Single-File Components of Vue.js Framework
 */
@@ -14,13 +14,6 @@ function hljsDefineVue(hljs) {
         relevance: 10,
       }),
       {
-        begin: /^(\s*)(<template lang=["']pug["']>)/gm,
-        end: /^(\s*)(<\/template>)/gm,
-        subLanguage: "pug",
-        excludeBegin: true,
-        excludeEnd: true,
-      },
-      {
         begin: /^(\s*)(<script>)/gm,
         end: /^(\s*)(<\/script>)/gm,
         subLanguage: "javascript",
@@ -28,28 +21,28 @@ function hljsDefineVue(hljs) {
         excludeEnd: true,
       },
       {
-        begin: /^(\s*)(<script lang=["']ts["']>)/gm,
+        begin: /^(?:\s*)(?:<script lang=(["'])ts\1>)/gm,
         end: /^(\s*)(<\/script>)/gm,
         subLanguage: "typescript",
         excludeBegin: true,
         excludeEnd: true,
       },
       {
-        begin: /^(\s*)(<style(\sscoped)?>)/gm,
+        begin: /^(\s*)(<style(\s+scoped)?>)/gm,
         end: /^(\s*)(<\/style>)/gm,
         subLanguage: "css",
         excludeBegin: true,
         excludeEnd: true,
       },
       {
-        begin: /^(\s*)(<style lang=["'](scss|sass)["'](\sscoped)?>)/gm,
+        begin: /^(?:\s*)(?:<style(?:\s+scoped)?\s+lang=(["'])(?:s[ca]ss)\1(?:\s+scoped)?>)/gm,
         end: /^(\s*)(<\/style>)/gm,
         subLanguage: "scss",
         excludeBegin: true,
         excludeEnd: true,
       },
       {
-        begin: /^(\s*)(<style lang=["']stylus["'](\sscoped)?>)/gm,
+        begin: /^(?:\s*)(?:<style(?:\s+scoped)?\s+lang=(["'])stylus\1(?:\s+scoped)?>)/gm,
         end: /^(\s*)(<\/style>)/gm,
         subLanguage: "stylus",
         excludeBegin: true,
