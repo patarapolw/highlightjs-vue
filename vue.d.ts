@@ -1,14 +1,19 @@
 import hljs from "highlight.js";
 
-export = hljsDefineVue;
+export = hljsRegisterVue;
 
 /**
  * Add Vue styling to highlight.js
  * @param hljs 
  */
-declare function hljsDefineVue(hljs: hljs.HLJSStatic): void;
+declare function hljsRegisterVue(hljs: hljs.HLJSStatic): void;
 
-declare namespace hljsDefineVue {
+declare namespace hljsRegisterVue {
+  /**
+   * Add Vue styling to highlight.js
+   * @param hljs 
+   */
+  function hljsRegisterVue(hljs: hljs.HLJSStatic): void;
   /**
    * Manually add Vue styling to highlight.js
    * 
@@ -18,5 +23,5 @@ declare namespace hljsDefineVue {
    * ```
    * @param hljs 
    */
-  function definer(hljs: hljs.HLJSStatic): hljs.IModeBase;
+  function hljsDefineVue(hljs: hljs.HLJSStatic): hljs.IModeBase;
 }
